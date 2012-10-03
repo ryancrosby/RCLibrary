@@ -17,12 +17,15 @@
 		C8CD13C8161A8CE300F0AFF9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CD13C7161A8CE300F0AFF9 /* Default@2x.png */; };
 		C8CD13CA161A8CE300F0AFF9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CD13C9161A8CE300F0AFF9 /* Default-568h@2x.png */; };
 		C8CD13CD161A8CE300F0AFF9 /* RCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13CC161A8CE300F0AFF9 /* RCViewController.m */; };
-		C8CD13D0161A8CE300F0AFF9 /* RCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CD13CE161A8CE300F0AFF9 /* RCViewController.xib */; };
 		C8CD13D8161A8CE400F0AFF9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CD13D7161A8CE400F0AFF9 /* SenTestingKit.framework */; };
 		C8CD13D9161A8CE400F0AFF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CD13B3161A8CE300F0AFF9 /* UIKit.framework */; };
 		C8CD13DA161A8CE400F0AFF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CD13B5161A8CE300F0AFF9 /* Foundation.framework */; };
 		C8CD13E2161A8CE400F0AFF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8CD13E0161A8CE400F0AFF9 /* InfoPlist.strings */; };
 		C8CD13E5161A8CE400F0AFF9 /* RCLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13E4161A8CE400F0AFF9 /* RCLibraryTests.m */; };
+		C8CD13F0161A8D6B00F0AFF9 /* RCMasterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13EF161A8D6B00F0AFF9 /* RCMasterDetailViewController.m */; };
+		C8CD13F3161A8EE300F0AFF9 /* UIViewController+RCHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13F2161A8EE300F0AFF9 /* UIViewController+RCHelpers.m */; };
+		C8CD13F6161AA3DB00F0AFF9 /* RCTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13F5161AA3DB00F0AFF9 /* RCTableViewSource.m */; };
+		C8CD13FA161AA95300F0AFF9 /* RCDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CD13F9161AA95300F0AFF9 /* RCDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,20 +47,27 @@
 		C8CD13BD161A8CE300F0AFF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8CD13BF161A8CE300F0AFF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CD13C1161A8CE300F0AFF9 /* RCLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		C8CD13C2161A8CE300F0AFF9 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
-		C8CD13C3161A8CE300F0AFF9 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
+		C8CD13C2161A8CE300F0AFF9 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCAppDelegate.h; path = RCLibrary/RCAppDelegate.h; sourceTree = "<group>"; };
+		C8CD13C3161A8CE300F0AFF9 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCAppDelegate.m; path = RCLibrary/RCAppDelegate.m; sourceTree = "<group>"; };
 		C8CD13C5161A8CE300F0AFF9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C8CD13C7161A8CE300F0AFF9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C8CD13C9161A8CE300F0AFF9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C8CD13CB161A8CE300F0AFF9 /* RCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCViewController.h; sourceTree = "<group>"; };
-		C8CD13CC161A8CE300F0AFF9 /* RCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCViewController.m; sourceTree = "<group>"; };
-		C8CD13CF161A8CE300F0AFF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RCViewController.xib; sourceTree = "<group>"; };
+		C8CD13CB161A8CE300F0AFF9 /* RCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCViewController.h; path = RCLibrary/RCViewController.h; sourceTree = "<group>"; };
+		C8CD13CC161A8CE300F0AFF9 /* RCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCViewController.m; path = RCLibrary/RCViewController.m; sourceTree = "<group>"; };
 		C8CD13D6161A8CE400F0AFF9 /* RCLibraryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCLibraryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CD13D7161A8CE400F0AFF9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C8CD13DF161A8CE400F0AFF9 /* RCLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		C8CD13E1161A8CE400F0AFF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8CD13E3161A8CE400F0AFF9 /* RCLibraryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCLibraryTests.h; sourceTree = "<group>"; };
 		C8CD13E4161A8CE400F0AFF9 /* RCLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCLibraryTests.m; sourceTree = "<group>"; };
+		C8CD13EE161A8D6B00F0AFF9 /* RCMasterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMasterDetailViewController.h; sourceTree = "<group>"; };
+		C8CD13EF161A8D6B00F0AFF9 /* RCMasterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMasterDetailViewController.m; sourceTree = "<group>"; };
+		C8CD13F1161A8EE300F0AFF9 /* UIViewController+RCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RCHelpers.h"; sourceTree = "<group>"; };
+		C8CD13F2161A8EE300F0AFF9 /* UIViewController+RCHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RCHelpers.m"; sourceTree = "<group>"; };
+		C8CD13F4161AA3DB00F0AFF9 /* RCTableViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTableViewSource.h; path = RCLibrary/RCTableViewSource.h; sourceTree = "<group>"; };
+		C8CD13F5161AA3DB00F0AFF9 /* RCTableViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTableViewSource.m; path = RCLibrary/RCTableViewSource.m; sourceTree = "<group>"; };
+		C8CD13F8161AA95300F0AFF9 /* RCDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDetailView.h; sourceTree = "<group>"; };
+		C8CD13F9161AA95300F0AFF9 /* RCDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 		C8CD13A4161A8CE300F0AFF9 = {
 			isa = PBXGroup;
 			children = (
+				C8CD13F7161AA3E300F0AFF9 /* RCExample */,
 				C8CD13B9161A8CE300F0AFF9 /* RCLibrary */,
 				C8CD13DD161A8CE400F0AFF9 /* RCLibraryTests */,
 				C8CD13B2161A8CE300F0AFF9 /* Frameworks */,
@@ -117,12 +128,10 @@
 		C8CD13B9161A8CE300F0AFF9 /* RCLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				C8CD13C2161A8CE300F0AFF9 /* RCAppDelegate.h */,
-				C8CD13C3161A8CE300F0AFF9 /* RCAppDelegate.m */,
-				C8CD13CB161A8CE300F0AFF9 /* RCViewController.h */,
-				C8CD13CC161A8CE300F0AFF9 /* RCViewController.m */,
-				C8CD13CE161A8CE300F0AFF9 /* RCViewController.xib */,
-				C8CD13BA161A8CE300F0AFF9 /* Supporting Files */,
+				C8CD13EE161A8D6B00F0AFF9 /* RCMasterDetailViewController.h */,
+				C8CD13EF161A8D6B00F0AFF9 /* RCMasterDetailViewController.m */,
+				C8CD13F1161A8EE300F0AFF9 /* UIViewController+RCHelpers.h */,
+				C8CD13F2161A8EE300F0AFF9 /* UIViewController+RCHelpers.m */,
 			);
 			path = RCLibrary;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 				C8CD13C9161A8CE300F0AFF9 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = RCLibrary;
 			sourceTree = "<group>";
 		};
 		C8CD13DD161A8CE400F0AFF9 /* RCLibraryTests */ = {
@@ -158,6 +168,22 @@
 				C8CD13E0161A8CE400F0AFF9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8CD13F7161AA3E300F0AFF9 /* RCExample */ = {
+			isa = PBXGroup;
+			children = (
+				C8CD13C2161A8CE300F0AFF9 /* RCAppDelegate.h */,
+				C8CD13C3161A8CE300F0AFF9 /* RCAppDelegate.m */,
+				C8CD13CB161A8CE300F0AFF9 /* RCViewController.h */,
+				C8CD13CC161A8CE300F0AFF9 /* RCViewController.m */,
+				C8CD13F4161AA3DB00F0AFF9 /* RCTableViewSource.h */,
+				C8CD13F5161AA3DB00F0AFF9 /* RCTableViewSource.m */,
+				C8CD13F8161AA95300F0AFF9 /* RCDetailView.h */,
+				C8CD13F9161AA95300F0AFF9 /* RCDetailView.m */,
+				C8CD13BA161A8CE300F0AFF9 /* Supporting Files */,
+			);
+			name = RCExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +262,6 @@
 				C8CD13C6161A8CE300F0AFF9 /* Default.png in Resources */,
 				C8CD13C8161A8CE300F0AFF9 /* Default@2x.png in Resources */,
 				C8CD13CA161A8CE300F0AFF9 /* Default-568h@2x.png in Resources */,
-				C8CD13D0161A8CE300F0AFF9 /* RCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +299,10 @@
 				C8CD13C0161A8CE300F0AFF9 /* main.m in Sources */,
 				C8CD13C4161A8CE300F0AFF9 /* RCAppDelegate.m in Sources */,
 				C8CD13CD161A8CE300F0AFF9 /* RCViewController.m in Sources */,
+				C8CD13F0161A8D6B00F0AFF9 /* RCMasterDetailViewController.m in Sources */,
+				C8CD13F3161A8EE300F0AFF9 /* UIViewController+RCHelpers.m in Sources */,
+				C8CD13F6161AA3DB00F0AFF9 /* RCTableViewSource.m in Sources */,
+				C8CD13FA161AA95300F0AFF9 /* RCDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +331,6 @@
 				C8CD13BD161A8CE300F0AFF9 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C8CD13CE161A8CE300F0AFF9 /* RCViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C8CD13CF161A8CE300F0AFF9 /* en */,
-			);
-			name = RCViewController.xib;
 			sourceTree = "<group>";
 		};
 		C8CD13E0161A8CE400F0AFF9 /* InfoPlist.strings */ = {
@@ -447,6 +468,7 @@
 				C8CD13EA161A8CE400F0AFF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8CD13EB161A8CE400F0AFF9 /* Build configuration list for PBXNativeTarget "RCLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +477,7 @@
 				C8CD13ED161A8CE400F0AFF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

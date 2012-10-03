@@ -2,7 +2,7 @@
 //  RCAppDelegate.m
 //  RCLibrary
 //
-//  Created by Kim and Ryan on 10/1/12.
+//  Created by Ryan Crosby on 10/1/12.
 //  Copyright (c) 2012 Ryan Crosby. All rights reserved.
 //
 
@@ -16,10 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-  self.viewController = [[RCViewController alloc] initWithNibName:@"RCViewController" bundle:nil];
+  self.viewController = [[RCViewController alloc] initWithNibName:nil bundle:nil];
   self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -2,7 +2,7 @@
 //  main.m
 //  RCLibrary
 //
-//  Created by Kim and Ryan on 10/1/12.
+//  Created by Ryan Crosby on 10/1/12.
 //  Copyright (c) 2012 Ryan Crosby. All rights reserved.
 //
 
