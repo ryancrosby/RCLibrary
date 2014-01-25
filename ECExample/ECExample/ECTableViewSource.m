@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Ryan Crosby. All rights reserved.
 //
 
-#import "RCTableViewSource.h"
+#import "ECTableViewSource.h"
 
-@implementation RCTableViewSource
+@implementation ECTableViewSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;

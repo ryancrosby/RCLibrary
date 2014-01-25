@@ -1,0 +1,14 @@
+PODS:
+  - ECLibrary (0.0.1)
+
+DEPENDENCIES:
+  - ECLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  ECLibrary:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ECLibrary: 1a0bb110820eac4c0bfd8c60ccb3486e97d1df57
+
+COCOAPODS: 0.29.0

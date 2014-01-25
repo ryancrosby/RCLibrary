@@ -1,21 +1,21 @@
 //
-//  RCViewController.m
-//  RCLibrary
+//  ECViewController.m
+//  ECExample
 //
-//  Created by Ryan Crosby on 10/1/12.
-//  Copyright (c) 2012 Ryan Crosby. All rights reserved.
+//  Created by Kim and Ryan on 1/25/14.
+//  Copyright (c) 2014 EclecticCoder. All rights reserved.
 //
 
-#import "RCViewController.h"
+#import "ECViewController.h"
 
-#import "RCTableViewSource.h"
-#import "RCDetailView.h"
+#import "ECTableViewSource.h"
+#import "ECDetailView.h"
 
-@interface RCViewController ()
+@interface ECViewController ()
 
 @end
 
-@implementation RCViewController
+@implementation ECViewController
 
 @synthesize tableViewSource = _tableViewSource;
 @synthesize landscapeDetailView = _landscapeDetailView;
@@ -25,7 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.tableViewSource = [[RCTableViewSource alloc] init];
+    self.tableViewSource = [[ECTableViewSource alloc] init];
     
     UITableView *newTableView = [[UITableView alloc] initWithFrame:self.masterView.frame style:UITableViewStylePlain];
     newTableView.dataSource = _tableViewSource;
@@ -33,7 +33,7 @@
     
     self.masterView = newTableView;
     
-    RCDetailView *newDetailView = [[RCDetailView alloc] initWithFrame:self.detailView.frame];
+    ECDetailView *newDetailView = [[ECDetailView alloc] initWithFrame:self.detailView.frame];
     newDetailView.scrollEnabled = YES;
     self.detailView = newDetailView;
     
@@ -47,7 +47,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    RCDetailView *newDetailView = [[RCDetailView alloc] initWithFrame:self.detailView.frame];
+    ECDetailView *newDetailView = [[ECDetailView alloc] initWithFrame:self.detailView.frame];
     newDetailView.scrollEnabled = YES;
     self.detailView = newDetailView;
     

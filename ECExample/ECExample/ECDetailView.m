@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 Ryan Crosby. All rights reserved.
 //
 
-#import "RCDetailView.h"
+#import "ECDetailView.h"
 
 #define kMargin                         2.0f
 
-@implementation RCDetailView
+@implementation ECDetailView
 
 @synthesize productImageContainer       = _productImageContainer;
 @synthesize productTitleLabel           = _productTitleLabel;

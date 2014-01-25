@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RCTableViewSource : NSObject < UITableViewDataSource, UITableViewDelegate >
+@interface ECTableViewSource : NSObject < UITableViewDataSource, UITableViewDelegate >
 
 @end

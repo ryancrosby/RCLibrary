@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCDetailView : UIScrollView
+@interface ECDetailView : UIScrollView
 
 @property (nonatomic, retain)   UIView                  *backgroundView;
 @property (nonatomic, retain)   UIView                  *productImageContainer;
