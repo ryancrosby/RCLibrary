@@ -15,17 +15,13 @@
 		87BB68A318C82C850077B249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68A218C82C850077B249 /* main.m */; };
 		87BB68A718C82C850077B249 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68A618C82C850077B249 /* AppDelegate.m */; };
 		87BB68B518C82C850077B249 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB68B418C82C850077B249 /* Images.xcassets */; };
-		87BB68BB18C82C850077B249 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D860C21894377D00EBD18E /* XCTest.framework */; };
-		87BB68BC18C82C850077B249 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D860B41894377D00EBD18E /* Foundation.framework */; };
-		87BB68BD18C82C850077B249 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D860C51894377D00EBD18E /* UIKit.framework */; };
-		87BB68C518C82C850077B249 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87BB68C318C82C850077B249 /* InfoPlist.strings */; };
-		87BB68C718C82C850077B249 /* ECLibraryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68C618C82C850077B249 /* ECLibraryDemoTests.m */; };
 		87BB68D018C82F690077B249 /* ECDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68CF18C82F690077B249 /* ECDemoListViewController.m */; };
 		87BB68D318C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68D218C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m */; };
 		87BB68D418C835390077B249 /* ECLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860BB1894377D00EBD18E /* ECLibrary.m */; };
 		87BB68D518C835400077B249 /* ECSectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB689118C82A870077B249 /* ECSectionFlowLayout.m */; };
 		87BB68D618C835400077B249 /* ECMasterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860DB189439CC00EBD18E /* ECMasterDetailViewController.m */; };
 		87BB68D718C835400077B249 /* UIViewController+ECHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860E018943A8700EBD18E /* UIViewController+ECHelpers.m */; };
+		87BB68D918C837000077B249 /* SectionFlowLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68D818C837000077B249 /* SectionFlowLayoutTests.m */; };
 		C8D860B51894377D00EBD18E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D860B41894377D00EBD18E /* Foundation.framework */; };
 		C8D860BA1894377D00EBD18E /* ECLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8D860B91894377D00EBD18E /* ECLibrary.h */; };
 		C8D860BC1894377D00EBD18E /* ECLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860BB1894377D00EBD18E /* ECLibrary.m */; };
@@ -37,16 +33,11 @@
 		C8D860D11894377D00EBD18E /* ECLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860D01894377D00EBD18E /* ECLibraryTests.m */; };
 		C8D860DC189439CC00EBD18E /* ECMasterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860DB189439CC00EBD18E /* ECMasterDetailViewController.m */; };
 		C8D860E118943A8700EBD18E /* UIViewController+ECHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860E018943A8700EBD18E /* UIViewController+ECHelpers.m */; };
+		D6F39DB069584EE6B23C78B8 /* libPods-ECLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8599A8A2B24B2D9C4216C5 /* libPods-ECLibraryTests.a */; };
+		DA450C8B4898410585D611E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C96BDF83974AD9AC27938A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87BB68BE18C82C850077B249 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8D860A91894377D00EBD18E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 87BB689618C82C850077B249;
-			remoteInfo = ECLibraryDemo;
-		};
 		C8D860C71894377D00EBD18E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C8D860A91894377D00EBD18E /* Project object */;
@@ -70,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28C96BDF83974AD9AC27938A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CB44D01C26496DAE1479B8 /* Pods-ECLibraryDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECLibraryDemoTests.xcconfig"; path = "Pods/Pods-ECLibraryDemoTests.xcconfig"; sourceTree = "<group>"; };
+		5688110DAF6F47499BF52E97 /* libPods-ECLibraryDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECLibraryDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECLibraryTests.xcconfig"; path = "Pods/Pods-ECLibraryTests.xcconfig"; sourceTree = "<group>"; };
 		87BB689018C82A870077B249 /* ECSectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSectionFlowLayout.h; path = UIKit/ECSectionFlowLayout.h; sourceTree = "<group>"; };
 		87BB689118C82A870077B249 /* ECSectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSectionFlowLayout.m; path = UIKit/ECSectionFlowLayout.m; sourceTree = "<group>"; };
 		87BB689718C82C850077B249 /* ECLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,14 +76,13 @@
 		87BB68A518C82C850077B249 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87BB68A618C82C850077B249 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		87BB68B418C82C850077B249 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		87BB68BA18C82C850077B249 /* ECLibraryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECLibraryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87BB68C218C82C850077B249 /* ECLibraryDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECLibraryDemoTests-Info.plist"; sourceTree = "<group>"; };
-		87BB68C418C82C850077B249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		87BB68C618C82C850077B249 /* ECLibraryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECLibraryDemoTests.m; sourceTree = "<group>"; };
 		87BB68CE18C82F690077B249 /* ECDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECDemoListViewController.h; sourceTree = "<group>"; };
 		87BB68CF18C82F690077B249 /* ECDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECDemoListViewController.m; sourceTree = "<group>"; };
 		87BB68D118C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECDemoSectionFlowCollectionViewController.h; sourceTree = "<group>"; };
 		87BB68D218C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECDemoSectionFlowCollectionViewController.m; sourceTree = "<group>"; };
+		87BB68D818C837000077B249 /* SectionFlowLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionFlowLayoutTests.m; sourceTree = "<group>"; };
+		A650E85D46FB4EB383932675 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BA8599A8A2B24B2D9C4216C5 /* libPods-ECLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D860B11894377D00EBD18E /* libECLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D860B41894377D00EBD18E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8D860B81894377D00EBD18E /* ECLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECLibrary-Prefix.pch"; sourceTree = "<group>"; };
@@ -114,16 +108,7 @@
 				87BB689A18C82C850077B249 /* CoreGraphics.framework in Frameworks */,
 				87BB689B18C82C850077B249 /* UIKit.framework in Frameworks */,
 				87BB689818C82C850077B249 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		87BB68B718C82C850077B249 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87BB68BB18C82C850077B249 /* XCTest.framework in Frameworks */,
-				87BB68BD18C82C850077B249 /* UIKit.framework in Frameworks */,
-				87BB68BC18C82C850077B249 /* Foundation.framework in Frameworks */,
+				DA450C8B4898410585D611E5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +128,7 @@
 				C8D860C91894377D00EBD18E /* libECLibrary.a in Frameworks */,
 				C8D860C61894377D00EBD18E /* UIKit.framework in Frameworks */,
 				C8D860C41894377D00EBD18E /* Foundation.framework in Frameworks */,
+				D6F39DB069584EE6B23C78B8 /* libPods-ECLibraryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,33 +161,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		87BB68C018C82C850077B249 /* ECLibraryDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				87BB68C618C82C850077B249 /* ECLibraryDemoTests.m */,
-				87BB68C118C82C850077B249 /* Supporting Files */,
-			);
-			path = ECLibraryDemoTests;
-			sourceTree = "<group>";
-		};
-		87BB68C118C82C850077B249 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				87BB68C218C82C850077B249 /* ECLibraryDemoTests-Info.plist */,
-				87BB68C318C82C850077B249 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		C8D860A81894377D00EBD18E = {
 			isa = PBXGroup;
 			children = (
 				87BB689C18C82C850077B249 /* ECLibraryDemo */,
-				87BB68C018C82C850077B249 /* ECLibraryDemoTests */,
 				C8D860B61894377D00EBD18E /* ECLibrary */,
 				C8D860CA1894377D00EBD18E /* ECLibraryTests */,
 				C8D860B31894377D00EBD18E /* Frameworks */,
 				C8D860B21894377D00EBD18E /* Products */,
+				A650E85D46FB4EB383932675 /* Pods.xcconfig */,
+				54CB44D01C26496DAE1479B8 /* Pods-ECLibraryDemoTests.xcconfig */,
+				59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,7 +181,6 @@
 				C8D860B11894377D00EBD18E /* libECLibrary.a */,
 				C8D860C11894377D00EBD18E /* ECLibraryTests.xctest */,
 				87BB689718C82C850077B249 /* ECLibraryDemo.app */,
-				87BB68BA18C82C850077B249 /* ECLibraryDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +192,9 @@
 				C8D860C21894377D00EBD18E /* XCTest.framework */,
 				C8D860C51894377D00EBD18E /* UIKit.framework */,
 				87BB689918C82C850077B249 /* CoreGraphics.framework */,
+				28C96BDF83974AD9AC27938A /* libPods.a */,
+				5688110DAF6F47499BF52E97 /* libPods-ECLibraryDemoTests.a */,
+				BA8599A8A2B24B2D9C4216C5 /* libPods-ECLibraryTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D860D01894377D00EBD18E /* ECLibraryTests.m */,
+				87BB68D818C837000077B249 /* SectionFlowLayoutTests.m */,
 				C8D860CB1894377D00EBD18E /* Supporting Files */,
 			);
 			path = ECLibraryTests;
@@ -284,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87BB68CC18C82C850077B249 /* Build configuration list for PBXNativeTarget "ECLibraryDemo" */;
 			buildPhases = (
+				E4590B8F32B24D6586D1540A /* Check Pods Manifest.lock */,
 				87BB689318C82C850077B249 /* Sources */,
 				87BB689418C82C850077B249 /* Frameworks */,
 				87BB689518C82C850077B249 /* Resources */,
+				30C4B7634A424E68901E6F1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,24 +271,6 @@
 			productName = ECLibraryDemo;
 			productReference = 87BB689718C82C850077B249 /* ECLibraryDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		87BB68B918C82C850077B249 /* ECLibraryDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 87BB68CD18C82C850077B249 /* Build configuration list for PBXNativeTarget "ECLibraryDemoTests" */;
-			buildPhases = (
-				87BB68B618C82C850077B249 /* Sources */,
-				87BB68B718C82C850077B249 /* Frameworks */,
-				87BB68B818C82C850077B249 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				87BB68BF18C82C850077B249 /* PBXTargetDependency */,
-			);
-			name = ECLibraryDemoTests;
-			productName = ECLibraryDemoTests;
-			productReference = 87BB68BA18C82C850077B249 /* ECLibraryDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C8D860B01894377D00EBD18E /* ECLibrary */ = {
 			isa = PBXNativeTarget;
@@ -336,9 +293,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8D860D71894377D00EBD18E /* Build configuration list for PBXNativeTarget "ECLibraryTests" */;
 			buildPhases = (
+				E0CEA2E8F3DC47F8B14D07A9 /* Check Pods Manifest.lock */,
 				C8D860BD1894377D00EBD18E /* Sources */,
 				C8D860BE1894377D00EBD18E /* Frameworks */,
 				C8D860BF1894377D00EBD18E /* Resources */,
+				68D793B225504992AAE36653 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -359,9 +318,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = EclecticCoder;
 				TargetAttributes = {
-					87BB68B918C82C850077B249 = {
-						TestTargetID = 87BB689618C82C850077B249;
-					};
 					C8D860C01894377D00EBD18E = {
 						TestTargetID = 87BB689618C82C850077B249;
 					};
@@ -381,7 +337,6 @@
 			projectRoot = "";
 			targets = (
 				87BB689618C82C850077B249 /* ECLibraryDemo */,
-				87BB68B918C82C850077B249 /* ECLibraryDemoTests */,
 				C8D860B01894377D00EBD18E /* ECLibrary */,
 				C8D860C01894377D00EBD18E /* ECLibraryTests */,
 			);
@@ -398,14 +353,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87BB68B818C82C850077B249 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87BB68C518C82C850077B249 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8D860BF1894377D00EBD18E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +362,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30C4B7634A424E68901E6F1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68D793B225504992AAE36653 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ECLibraryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0CEA2E8F3DC47F8B14D07A9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4590B8F32B24D6586D1540A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87BB689318C82C850077B249 /* Sources */ = {
@@ -429,14 +439,6 @@
 				87BB68A718C82C850077B249 /* AppDelegate.m in Sources */,
 				87BB68A318C82C850077B249 /* main.m in Sources */,
 				87BB68D318C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		87BB68B618C82C850077B249 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87BB68C718C82C850077B249 /* ECLibraryDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,17 +458,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8D860D11894377D00EBD18E /* ECLibraryTests.m in Sources */,
+				87BB68D918C837000077B249 /* SectionFlowLayoutTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87BB68BF18C82C850077B249 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 87BB689618C82C850077B249 /* ECLibraryDemo */;
-			targetProxy = 87BB68BE18C82C850077B249 /* PBXContainerItemProxy */;
-		};
 		C8D860C81894377D00EBD18E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C8D860B01894377D00EBD18E /* ECLibrary */;
@@ -479,14 +477,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				87BB68A018C82C850077B249 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		87BB68C318C82C850077B249 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				87BB68C418C82C850077B249 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -504,6 +494,7 @@
 /* Begin XCBuildConfiguration section */
 		87BB68C818C82C850077B249 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -528,6 +519,7 @@
 		};
 		87BB68C918C82C850077B249 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -543,48 +535,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		87BB68CA18C82C850077B249 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ECLibraryDemo/ECLibraryDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ECLibraryDemoTests/ECLibraryDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		87BB68CB18C82C850077B249 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ECLibraryDemo/ECLibraryDemo-Prefix.pch";
-				INFOPLIST_FILE = "ECLibraryDemoTests/ECLibraryDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -660,6 +610,7 @@
 		};
 		C8D860D51894377D00EBD18E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/ECLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -672,6 +623,7 @@
 		};
 		C8D860D61894377D00EBD18E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/ECLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -684,6 +636,7 @@
 		};
 		C8D860D81894377D00EBD18E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
@@ -707,6 +660,7 @@
 		};
 		C8D860D91894377D00EBD18E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
@@ -732,15 +686,6 @@
 			buildConfigurations = (
 				87BB68C818C82C850077B249 /* Debug */,
 				87BB68C918C82C850077B249 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		87BB68CD18C82C850077B249 /* Build configuration list for PBXNativeTarget "ECLibraryDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				87BB68CA18C82C850077B249 /* Debug */,
-				87BB68CB18C82C850077B249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
