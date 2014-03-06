@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 EclecticCoder. All rights reserved.
 //
 
-#import "ECViewController.h"
+#import "ECDemoMasterDetailController.h"
 
 #import "ECTableViewSource.h"
 #import "ECDetailView.h"
 
-@interface ECViewController ()
+@interface ECDemoMasterDetailController ()
 
 @end
 
-@implementation ECViewController
+@implementation ECDemoMasterDetailController
 
 @synthesize tableViewSource = _tableViewSource;
 @synthesize landscapeDetailView = _landscapeDetailView;

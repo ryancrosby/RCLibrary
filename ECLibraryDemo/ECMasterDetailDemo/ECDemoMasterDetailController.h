@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 EclecticCoder. All rights reserved.
 //
 
-#import <ECLibrary/UIKit/ECMasterDetailViewController.h>
+#import "ECMasterDetailViewController.h"
 
 @class ECTableViewSource;
 
-@interface ECViewController : ECMasterDetailViewController < UITableViewDelegate >
+@interface ECDemoMasterDetailController : ECMasterDetailViewController < UITableViewDelegate >
 
 @property ECTableViewSource                     *tableViewSource;
 

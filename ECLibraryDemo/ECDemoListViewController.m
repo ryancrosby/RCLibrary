@@ -10,7 +10,10 @@
 
 #import "ECDemoSectionFlowCollectionViewController.h"
 
+#import "ECDemoMasterDetailController.h"
+
 static NSString *ECSectionFlowLayoutTitle = @"Section Flow Layout";
+static NSString *ECMasterDetailControllerTitle = @"Master Detail Controller";
 
 static NSString *ECDemoListViewControllerCellIdentifier = @"ECDemoListViewControllerCellResueIdentifier";
 
@@ -35,7 +38,7 @@ static NSString *ECDemoListViewControllerCellIdentifier = @"ECDemoListViewContro
 {
     [super viewDidLoad];
     
-    _tableItems = @[@[ECSectionFlowLayoutTitle]];
+    _tableItems = @[@[ECSectionFlowLayoutTitle], @[ECMasterDetailControllerTitle]];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ECDemoListViewControllerCellIdentifier];
 
@@ -80,6 +83,10 @@ static NSString *ECDemoListViewControllerCellIdentifier = @"ECDemoListViewContro
     
     if ([demoSelected isEqualToString:ECSectionFlowLayoutTitle]) {
         ECDemoSectionFlowCollectionViewController *viewController = [[ECDemoSectionFlowCollectionViewController alloc] initWithCollectionViewLayout:[[ECSectionFlowLayout alloc] init]];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else if ([demoSelected isEqualToString:ECMasterDetailControllerTitle]) {
+        ECDemoMasterDetailController *viewController = [[ECDemoMasterDetailController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

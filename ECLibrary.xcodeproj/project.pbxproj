@@ -22,6 +22,9 @@
 		87BB68D618C835400077B249 /* ECMasterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860DB189439CC00EBD18E /* ECMasterDetailViewController.m */; };
 		87BB68D718C835400077B249 /* UIViewController+ECHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860E018943A8700EBD18E /* UIViewController+ECHelpers.m */; };
 		87BB68D918C837000077B249 /* SectionFlowLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68D818C837000077B249 /* SectionFlowLayoutTests.m */; };
+		87BB68E018C8CC770077B249 /* ECDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68DB18C8CC770077B249 /* ECDetailView.m */; };
+		87BB68E118C8CC770077B249 /* ECTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68DD18C8CC770077B249 /* ECTableViewSource.m */; };
+		87BB68E218C8CC770077B249 /* ECDemoMasterDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB68DF18C8CC770077B249 /* ECDemoMasterDetailController.m */; };
 		C8D860B51894377D00EBD18E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D860B41894377D00EBD18E /* Foundation.framework */; };
 		C8D860BA1894377D00EBD18E /* ECLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8D860B91894377D00EBD18E /* ECLibrary.h */; };
 		C8D860BC1894377D00EBD18E /* ECLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D860BB1894377D00EBD18E /* ECLibrary.m */; };
@@ -81,6 +84,12 @@
 		87BB68D118C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECDemoSectionFlowCollectionViewController.h; sourceTree = "<group>"; };
 		87BB68D218C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECDemoSectionFlowCollectionViewController.m; sourceTree = "<group>"; };
 		87BB68D818C837000077B249 /* SectionFlowLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionFlowLayoutTests.m; sourceTree = "<group>"; };
+		87BB68DA18C8CC770077B249 /* ECDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECDetailView.h; path = ECMasterDetailDemo/ECDetailView.h; sourceTree = "<group>"; };
+		87BB68DB18C8CC770077B249 /* ECDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECDetailView.m; path = ECMasterDetailDemo/ECDetailView.m; sourceTree = "<group>"; };
+		87BB68DC18C8CC770077B249 /* ECTableViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECTableViewSource.h; path = ECMasterDetailDemo/ECTableViewSource.h; sourceTree = "<group>"; };
+		87BB68DD18C8CC770077B249 /* ECTableViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECTableViewSource.m; path = ECMasterDetailDemo/ECTableViewSource.m; sourceTree = "<group>"; };
+		87BB68DE18C8CC770077B249 /* ECDemoMasterDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECDemoMasterDetailController.h; path = ECMasterDetailDemo/ECDemoMasterDetailController.h; sourceTree = "<group>"; };
+		87BB68DF18C8CC770077B249 /* ECDemoMasterDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECDemoMasterDetailController.m; path = ECMasterDetailDemo/ECDemoMasterDetailController.m; sourceTree = "<group>"; };
 		A650E85D46FB4EB383932675 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BA8599A8A2B24B2D9C4216C5 /* libPods-ECLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D860B11894377D00EBD18E /* libECLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +147,7 @@
 		87BB689C18C82C850077B249 /* ECLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				87BB68E318C8CC7E0077B249 /* Master Detail Demo */,
 				87BB68A518C82C850077B249 /* AppDelegate.h */,
 				87BB68A618C82C850077B249 /* AppDelegate.m */,
 				87BB68CE18C82F690077B249 /* ECDemoListViewController.h */,
@@ -159,6 +169,19 @@
 				87BB68A418C82C850077B249 /* ECLibraryDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87BB68E318C8CC7E0077B249 /* Master Detail Demo */ = {
+			isa = PBXGroup;
+			children = (
+				87BB68DA18C8CC770077B249 /* ECDetailView.h */,
+				87BB68DB18C8CC770077B249 /* ECDetailView.m */,
+				87BB68DC18C8CC770077B249 /* ECTableViewSource.h */,
+				87BB68DD18C8CC770077B249 /* ECTableViewSource.m */,
+				87BB68DE18C8CC770077B249 /* ECDemoMasterDetailController.h */,
+				87BB68DF18C8CC770077B249 /* ECDemoMasterDetailController.m */,
+			);
+			name = "Master Detail Demo";
 			sourceTree = "<group>";
 		};
 		C8D860A81894377D00EBD18E = {
@@ -434,9 +457,12 @@
 				87BB68D418C835390077B249 /* ECLibrary.m in Sources */,
 				87BB68D518C835400077B249 /* ECSectionFlowLayout.m in Sources */,
 				87BB68D718C835400077B249 /* UIViewController+ECHelpers.m in Sources */,
+				87BB68E018C8CC770077B249 /* ECDetailView.m in Sources */,
+				87BB68E118C8CC770077B249 /* ECTableViewSource.m in Sources */,
 				87BB68D618C835400077B249 /* ECMasterDetailViewController.m in Sources */,
 				87BB68D018C82F690077B249 /* ECDemoListViewController.m in Sources */,
 				87BB68A718C82C850077B249 /* AppDelegate.m in Sources */,
+				87BB68E218C8CC770077B249 /* ECDemoMasterDetailController.m in Sources */,
 				87BB68A318C82C850077B249 /* main.m in Sources */,
 				87BB68D318C8327C0077B249 /* ECDemoSectionFlowCollectionViewController.m in Sources */,
 			);
