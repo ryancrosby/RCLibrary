@@ -41,12 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C8D860C71894377D00EBD18E /* PBXContainerItemProxy */ = {
+		872AB28B18D158090026209C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C8D860A91894377D00EBD18E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C8D860B01894377D00EBD18E;
-			remoteInfo = ECLibrary;
+			remoteGlobalIDString = 87BB689618C82C850077B249;
+			remoteInfo = ECLibraryDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -68,6 +68,10 @@
 		54CB44D01C26496DAE1479B8 /* Pods-ECLibraryDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECLibraryDemoTests.xcconfig"; path = "Pods/Pods-ECLibraryDemoTests.xcconfig"; sourceTree = "<group>"; };
 		5688110DAF6F47499BF52E97 /* libPods-ECLibraryDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECLibraryDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECLibraryTests.xcconfig"; path = "Pods/Pods-ECLibraryTests.xcconfig"; sourceTree = "<group>"; };
+		872AB27F18D157DE0026209C /* ECLibraryTestSuite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECLibraryTestSuite-Info.plist"; sourceTree = "<group>"; };
+		872AB28118D157DE0026209C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		872AB28318D157DE0026209C /* ECLibraryTestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECLibraryTestSuite.m; sourceTree = "<group>"; };
+		872AB28518D157DE0026209C /* ECLibraryTestSuite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECLibraryTestSuite-Prefix.pch"; sourceTree = "<group>"; };
 		87BB689018C82A870077B249 /* ECSectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSectionFlowLayout.h; path = UIKit/ECSectionFlowLayout.h; sourceTree = "<group>"; };
 		87BB689118C82A870077B249 /* ECSectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSectionFlowLayout.m; path = UIKit/ECSectionFlowLayout.m; sourceTree = "<group>"; };
 		87BB689718C82C850077B249 /* ECLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		872AB27D18D157DE0026209C /* ECLibraryTestSuite */ = {
+			isa = PBXGroup;
+			children = (
+				872AB28318D157DE0026209C /* ECLibraryTestSuite.m */,
+				872AB27E18D157DE0026209C /* Supporting Files */,
+			);
+			path = ECLibraryTestSuite;
+			sourceTree = "<group>";
+		};
+		872AB27E18D157DE0026209C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				872AB27F18D157DE0026209C /* ECLibraryTestSuite-Info.plist */,
+				872AB28018D157DE0026209C /* InfoPlist.strings */,
+				872AB28518D157DE0026209C /* ECLibraryTestSuite-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		87BB689C18C82C850077B249 /* ECLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +213,7 @@
 				87BB689C18C82C850077B249 /* ECLibraryDemo */,
 				C8D860B61894377D00EBD18E /* ECLibrary */,
 				C8D860CA1894377D00EBD18E /* ECLibraryTests */,
+				872AB27D18D157DE0026209C /* ECLibraryTestSuite */,
 				C8D860B31894377D00EBD18E /* Frameworks */,
 				C8D860B21894377D00EBD18E /* Products */,
 				A650E85D46FB4EB383932675 /* Pods.xcconfig */,
@@ -325,7 +349,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C8D860C81894377D00EBD18E /* PBXTargetDependency */,
+				872AB28C18D158090026209C /* PBXTargetDependency */,
 			);
 			name = ECLibraryTests;
 			productName = ECLibraryTests;
@@ -338,7 +362,7 @@
 		C8D860A91894377D00EBD18E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = EclecticCoder;
 				TargetAttributes = {
 					C8D860C01894377D00EBD18E = {
@@ -491,14 +515,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C8D860C81894377D00EBD18E /* PBXTargetDependency */ = {
+		872AB28C18D158090026209C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C8D860B01894377D00EBD18E /* ECLibrary */;
-			targetProxy = C8D860C71894377D00EBD18E /* PBXContainerItemProxy */;
+			target = 87BB689618C82C850077B249 /* ECLibraryDemo */;
+			targetProxy = 872AB28B18D158090026209C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		872AB28018D157DE0026209C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872AB28118D157DE0026209C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		87BB689F18C82C850077B249 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,7 +554,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -547,7 +578,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A650E85D46FB4EB383932675 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -568,7 +598,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -606,7 +635,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -664,7 +692,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -688,7 +715,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59DDD19B052C4207B155C537 /* Pods-ECLibraryTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ECLibraryDemo.app/ECLibraryDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
