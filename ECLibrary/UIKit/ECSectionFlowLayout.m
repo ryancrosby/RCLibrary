@@ -40,7 +40,7 @@
 
 - (NSInteger)totalColumns {
     NSInteger totalSections = [self.collectionView numberOfSections];
-    return totalSections / [self visibleRowCount];
+    return totalSections == 0 ? 0 : totalSections / [self visibleRowCount];
 }
 
 - (NSInteger)totalRows {
@@ -48,10 +48,12 @@
 }
 
 - (CGFloat)columnWidth {
-    return ceilf((CGRectGetWidth(self.collectionView.bounds) / (CGFloat)[self visibleColumnCount]));
+    return [self visibleColumnCount] > 0 ? ceilf((CGRectGetWidth(self.collectionView.bounds) / (CGFloat)[self visibleColumnCount])) : 0.f;
 }
 
 - (CGFloat)rowHeight {
+    if ([self visibleColumnCount] == 0) return 0;
+    
     return ceilf((CGRectGetHeight(self.collectionView.bounds) / (CGFloat)[self visibleRowCount]));
 }
 
@@ -60,6 +62,8 @@
 }
 
 - (NSInteger)visibleRowCount {
+    if ([self visibleColumnCount] == 0) return 0;
+    
     return ([self.collectionView numberOfSections] > [self visibleColumnCount]) ? 2 : 1;
 }
 

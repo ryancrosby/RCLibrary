@@ -97,7 +97,67 @@
     
     CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
     
-    XCTAssert(CGSizeEqualToSize(contentSize, expectedContentSize), @"Content size should not be zero");
+    XCTAssert(CGSizeEqualToSize(contentSize, expectedContentSize), @"Content size expected to be %@, but is %@", NSStringFromCGSize(expectedContentSize), NSStringFromCGSize(contentSize));
+}
+
+- (void)testContentSizeFewItems {
+    
+    ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
+    mockData.itemCounts = @[@(2),@(2)];
+    
+    [self mockCollectionViewLayoutDependencies:mockData];
+    
+    NSInteger expectedColumns = 2;
+    NSInteger expectedRows = 1;
+    
+    CGFloat contentWidth = CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
+    CGFloat contentHeight = CGRectGetHeight(_collectionViewFrame);
+    
+    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    
+    CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
+    
+    XCTAssert(CGSizeEqualToSize(contentSize, expectedContentSize), @"Content size expected to be %@, but is %@", NSStringFromCGSize(expectedContentSize), NSStringFromCGSize(contentSize));
+}
+
+- (void)testContentSizeOneItem {
+    
+    ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
+    mockData.itemCounts = @[@(2)];
+    
+    [self mockCollectionViewLayoutDependencies:mockData];
+    
+    NSInteger expectedColumns = 1;
+    NSInteger expectedRows = 1;
+    
+    CGFloat contentWidth = CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
+    CGFloat contentHeight = CGRectGetHeight(_collectionViewFrame);
+    
+    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    
+    CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
+    
+    XCTAssert(CGSizeEqualToSize(contentSize, expectedContentSize), @"Content size expected to be %@, but is %@", NSStringFromCGSize(expectedContentSize), NSStringFromCGSize(contentSize));
+}
+
+- (void)testContentSizeNoItems {
+    
+    ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
+    mockData.itemCounts = @[];
+    
+    [self mockCollectionViewLayoutDependencies:mockData];
+    
+    NSInteger expectedColumns = 0;
+    NSInteger expectedRows = 0;
+    
+    CGFloat contentWidth = 0; // CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
+    CGFloat contentHeight = 0; //CGRectGetHeight(_collectionViewFrame);
+    
+    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    
+    CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
+    
+    XCTAssert(CGSizeEqualToSize(contentSize, expectedContentSize), @"Content size expected to be %@, but is %@", NSStringFromCGSize(expectedContentSize), NSStringFromCGSize(contentSize));
 }
 
 @end
