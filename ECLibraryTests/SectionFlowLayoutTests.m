@@ -15,6 +15,7 @@
 @interface ECCollectionViewLayoutMockData : NSObject
 
 @property (nonatomic, retain) NSArray *itemCounts;
+@property (nonatomic, assign) CGRect collectionViewFrame;
 
 @end
 
@@ -22,12 +23,7 @@
 
 @end
 
-@interface SectionFlowLayoutTests : XCTestCase {
-    CGRect _collectionViewFrame;
-    
-    NSInteger _sectionCount;
-    NSInteger _sectionItemCount;
-}
+@interface SectionFlowLayoutTests : XCTestCase
 
 @property (nonatomic, strong) ECSectionFlowLayout *sectionFlowLayout;
     
@@ -43,20 +39,7 @@
 {
     [super setUp];
     
-    _sectionCount = 15;
-    _sectionItemCount = 2;
-    
-    self.mockDataSource = [OCMockObject mockForProtocol:@protocol(UICollectionViewDataSource)];
-    
-    [[[_mockDataSource stub] andReturnValue:@(_sectionCount)] numberOfSectionsInCollectionView:[OCMArg any]];
-    [[[[_mockDataSource stub] andReturnValue:@(_sectionItemCount)] ignoringNonObjectArgs] collectionView:[OCMArg any] numberOfItemsInSection:0];
-    
-    _collectionViewFrame = CGRectMake(25.f, 25.f, 100.f, 100.f);
-    
     self.sectionFlowLayout = [[ECSectionFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:_collectionViewFrame collectionViewLayout:_sectionFlowLayout];
-    _collectionView.dataSource = _mockDataSource;
-    
 }
 
 - (void)tearDown
@@ -75,25 +58,70 @@
         [[[_mockDataSource stub] andReturnValue:@([itemCountForSection integerValue])] collectionView:[OCMArg any] numberOfItemsInSection:idx];
     }];
     
+    self.collectionView = [[UICollectionView alloc] initWithFrame:mockData.collectionViewFrame collectionViewLayout:_sectionFlowLayout];
+    
     self.collectionView.dataSource = _mockDataSource;
 }
 
 - (void)testInitialization { XCTAssert(_sectionFlowLayout, @"Object should be alloced"); }
-    
-- (void)testContentSize {
+
+- (void)testLayoutAttributes {
     
     ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
-    mockData.itemCounts = @[@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2),];
+    mockData.itemCounts = @[@(2),@(2),@(2),@(2)];
+    mockData.collectionViewFrame = CGRectMake(0.f, 0.f, 100.f, 100.f);
     
     [self mockCollectionViewLayoutDependencies:mockData];
     
-    NSInteger expectedColumns = 4;
-    NSInteger expectedRows = 2;
+    NSIndexPath *indexPathToTest = [NSIndexPath indexPathForItem:0 inSection:1];
     
-    CGFloat contentWidth = CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
-    CGFloat contentHeight = CGRectGetHeight(_collectionViewFrame);
+    UICollectionViewLayoutAttributes *expectedLayoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPathToTest];
+    expectedLayoutAttributes.frame = CGRectMake(15.f, 15.f, 30.f, 30.f);
     
-    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    UICollectionViewLayoutAttributes *layoutAttributes = [_sectionFlowLayout layoutAttributesForItemAtIndexPath:indexPathToTest];
+    
+    XCTAssert(([expectedLayoutAttributes.indexPath compare:layoutAttributes.indexPath] == NSOrderedSame), @"Index Paths do not match");
+    XCTAssert(CGRectEqualToRect(expectedLayoutAttributes.frame, layoutAttributes.frame), @"Content size expected to be %@, but is %@", NSStringFromCGRect(expectedLayoutAttributes.frame), NSStringFromCGRect(layoutAttributes.frame));
+}
+
+- (void)testLayoutAttributesForRect {
+    ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
+    mockData.itemCounts = @[@(2),@(2),@(2),@(2)];
+    mockData.collectionViewFrame = CGRectMake(0.f, 0.f, 100.f, 100.f);
+    
+    [self mockCollectionViewLayoutDependencies:mockData];
+    
+    NSIndexPath *indexPathToTest = [NSIndexPath indexPathForItem:0 inSection:1];
+    
+    UICollectionViewLayoutAttributes *expectedLayoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPathToTest];
+    expectedLayoutAttributes.frame = CGRectMake(15.f, 15.f, 30.f, 30.f);
+    
+    //UICollectionViewLayoutAttributes *layoutAttributes = [_sectionFlowLayout layoutAttributesForItemAtIndexPath:indexPathToTest];
+    NSArray *attributes = [_sectionFlowLayout layoutAttributesForElementsInRect:CGRectMake(0.0f, 0.0f, 100.f, 100.f)];
+    
+    for (UICollectionViewLayoutAttributes *layoutAttributes in attributes) {
+        if ([layoutAttributes.indexPath isEqual:[NSIndexPath indexPathForItem:0 inSection:1]]) {
+            if (layoutAttributes) {
+                <#statements#>
+            }
+        } else {
+            <#statements#>
+        }
+    }
+    
+    
+    XCTAssert(([expectedLayoutAttributes.indexPath compare:layoutAttributes.indexPath] == NSOrderedSame), @"Index Paths do not match");
+    XCTAssert(CGRectEqualToRect(expectedLayoutAttributes.frame, layoutAttributes.frame), @"Content size expected to be %@, but is %@", NSStringFromCGRect(expectedLayoutAttributes.frame), NSStringFromCGRect(layoutAttributes.frame));
+}
+
+- (void)testContentSize {
+    
+    ECCollectionViewLayoutMockData *mockData = [[ECCollectionViewLayoutMockData alloc] init];
+    mockData.itemCounts = @[@(2),@(2),@(2),@(2),@(2),@(2),@(2),@(2)];
+    
+    [self mockCollectionViewLayoutDependencies:mockData];
+    
+    CGSize expectedContentSize = CGSizeMake(340.f, 100.f);
     
     CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
     
@@ -110,10 +138,7 @@
     NSInteger expectedColumns = 2;
     NSInteger expectedRows = 1;
     
-    CGFloat contentWidth = CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
-    CGFloat contentHeight = CGRectGetHeight(_collectionViewFrame);
-    
-    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    CGSize expectedContentSize = CGSizeMake(100.f, 100.f);
     
     CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
     
@@ -127,13 +152,7 @@
     
     [self mockCollectionViewLayoutDependencies:mockData];
     
-    NSInteger expectedColumns = 1;
-    NSInteger expectedRows = 1;
-    
-    CGFloat contentWidth = CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
-    CGFloat contentHeight = CGRectGetHeight(_collectionViewFrame);
-    
-    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    CGSize expectedContentSize = CGSizeMake(100.f, 100.f);
     
     CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
     
@@ -147,13 +166,7 @@
     
     [self mockCollectionViewLayoutDependencies:mockData];
     
-    NSInteger expectedColumns = 0;
-    NSInteger expectedRows = 0;
-    
-    CGFloat contentWidth = 0; // CGRectGetWidth(_collectionViewFrame) / expectedColumns * ([mockData.itemCounts count] / expectedRows);
-    CGFloat contentHeight = 0; //CGRectGetHeight(_collectionViewFrame);
-    
-    CGSize expectedContentSize = CGSizeMake(contentWidth, contentHeight);
+    CGSize expectedContentSize = CGSizeMake(100.f, 100.f);
     
     CGSize contentSize = [_sectionFlowLayout collectionViewContentSize];
     

@@ -8,7 +8,19 @@
 
 #import "ECSectionFlowLayout.h"
 
+static const CGFloat kLayoutInsetTop = 15.f;
+static const CGFloat kLayoutInsetLeft = 15.f;
+static const CGFloat kLayoutInsetBottom = 15.f;
+static const CGFloat kLayoutInsetRight = 15.f;
+
+static const CGFloat kColumnMargin = 10.f;
+static const CGFloat kRowMargin = 10.f;
+
 @interface ECSectionFlowLayout ()
+
+- (UIEdgeInsets)layoutInsets;
+- (CGFloat)columnMargin;
+- (CGFloat)rowMargin;
 
 - (CGFloat)columnWidth;
 - (CGFloat)rowHeight;
@@ -37,6 +49,11 @@
 }
 
 #pragma mark - ECGameLayoutHelpers
+
+- (UIEdgeInsets)layoutInsets { return UIEdgeInsetsMake(kLayoutInsetTop, kLayoutInsetLeft, kLayoutInsetBottom, kLayoutInsetRight); }
+
+- (CGFloat)columnMargin { return kColumnMargin; }
+- (CGFloat)rowMargin { return kRowMargin; }
 
 - (NSInteger)totalColumns {
     NSInteger totalSections = [self.collectionView numberOfSections];
